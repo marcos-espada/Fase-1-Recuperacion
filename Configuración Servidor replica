@@ -1,0 +1,5 @@
+#comando para cambiar el nommbre del equipo en Windows 2019 Core
+Rename-Computer -NewName srvreplica
+
+#comando para cambiar el reloj de Internet
+w32t /config /manualpeerlist:"hora.rediris.es" /syncfromflags:manual /update
