@@ -17,4 +17,4 @@ netsh interface ipv4 set address name="Ethernet" static 192.168.2.2 255.255.255.
 Get-WmiObject win32_useraccount | Select domain,name,sid
 
 #Comando para la configuracion del DNS
-netsh interface ipv4 set address dnsservers="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
+netsh interface ipv4 set dns name="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
