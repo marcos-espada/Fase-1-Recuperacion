@@ -12,3 +12,6 @@ Get-NetFirewallProfile | select name,enabled
 
 #comando para cambiar la configuración del Ipv4
 netsh interface ipv4 set address name="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
+
+#comando para saber el SID
+Get-WmiObject win32_useraccount | Select domain,name,sid
