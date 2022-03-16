@@ -3,3 +3,12 @@ Rename-Computer -NewName srvreplica
 
 #comando para cambiar el reloj de Internet
 w32t /config /manualpeerlist:"hora.rediris.es" /syncfromflags:manual /update
+
+#comando para deshabilitar el firewall
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled false
+
+#comando para comprobar el estado del firewall
+Get-NetFirewallProfile | select name,enabled
+
+#comando para cambiar la configuración del Ipv4
+netsh interface ipv4 set address name="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
